@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mohill Demos</title>
+  <style type="text/css">
+  	
+  	@charset "utf-8";
+
+	body {
+	  height: 100vh;
+	  background: #f8f8f8;
+	  margin: 0;
+	  font: 14px / 1.5 'Open Sans',sans-serif;
+	}
+
+	p {
+	  display: inline-block;
+	  margin: .3em;
+	  letter-spacing: 5px;
+	  color: #fff;
+	  background: #fff;
+	}
+
+	.buttons {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+
+	#button1 {
+	  height: 2em;
+	  width: 2em;
+	  margin: 1em;
+	  background: #0d5661;
+	  cursor: pointer;
+	  border-radius: 4px;
+	}
+
+	#button2 {
+	  height: 2em;
+	  width: 2em;
+	  margin: 1em;
+	  background: #6d2e5b;
+	  cursor: pointer;
+	  border-radius: 4px;
+	}
+
+	.page {
+	  color: #fff;
+	  text-align: center;
+	}
+
+	.page h1 {
+	  padding-bottom: .5em;
+	  border-bottom: 1px solid #fff;
+	}
+
+	.page .close {
+	  border: 1px solid #fff;
+	  padding: .2em;
+	  margin: 3em 15% 0;
+	  cursor: pointer;
+	  -webkit-transition: .2s cubic-bezier(0.86, 0, 0.07, 1);
+	  transition: .2s cubic-bezier(0.86, 0, 0.07, 1);
+	  -webkit-user-select: none;
+	     -moz-user-select: none;
+	      -ms-user-select: none;
+	          user-select: none;
+	}
+
+	.page .close:hover {
+	  background: rgba(255,255,255,.2);
+	}
+
+  </style>
+  </head>
+<body style="margin: 0;overflow:hidden">
+
+  <h1 style="text-align:center">Mohill Demos</h1>
+  
+  <div class="buttons">
+    <div id="button1"></div>
+    <div id="button2"></div>
+  </div>
+  <div id="app">
+    <div id="foo" class="page" style="display:none">
+      <h1 class="h"><span>foo</span></h1>
+      <div><p>xxxxxxx</p></div>
+      <div><p>xxxxxxxxxxx</p></div>
+      <div><p>xxxxxxx</p></div>
+      <div><p>xxx</p></div>
+      <div><p>xxxxxxxxxxx</p></div>
+      <div class="close">Close</div>
+    </div>
+    <div id="bar" class="page" style="display:none">
+      <h1 class="h"><span>bar</span></h1>
+      <div><p>xxxxxxxxxxxx</p></div>
+      <div><p>xxxxx</p></div>
+      <div><p>xxxx</p></div>
+      <div><p>xxxxxxxxx</p></div>
+      <div><p>xxxxxxxxxxxxxxxxx</p></div>
+      <div class="close">Close</div>
+    </div>
+  </div>
+
+<script src="http://www.cssscript.com/demo/bottom-sliding-modal-window-vanilla-javascript-mohill/mohill.js"></script>
+<script>
+(function () {
+  Array.prototype.slice.call(document.getElementsByClassName('close'))
+    .forEach(el => {
+      el.addEventListener('click', () => {
+        mohill.close();
+      });
+    });
+
+  const mohill = new Mohill({
+    target: document.getElementById('app'),
+    data: {
+      style: {
+        coverBackgroundColor: 'rgba(0,0,0,.4)'
+      }
+    }
+  });
+
+  document.getElementById('button1').addEventListener('click', () => {
+    mohill.setStyle({backgroundColor: '#0d5661'});
+    mohill.open('foo');
+  });
+  document.getElementById('button2').addEventListener('click', () => {
+    mohill.setStyle({backgroundColor: '#6d2e5b'});
+    mohill.open('bar');
+  });
+})();
+</script>
+</body>
+</html>
