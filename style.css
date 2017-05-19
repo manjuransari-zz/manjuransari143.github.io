@@ -46,6 +46,10 @@ a:hover {
   font-weight: bold;
   color:#000;
 }
+.link2 a{
+  color: yellow;
+  text-align: right;
+}
 .key2:first-child { margin-left: 35px }
 .key2 { margin: 0 15px;
        position: relative;
