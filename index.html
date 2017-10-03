@@ -168,7 +168,7 @@
                 <h2 class="col">Projects</h2>
                 <div class="section-text col-right row">
                     <div class="buttons">
-                        <table border="0px" cellspacing="8px" width="720px">
+                        <table border="0px" cellspacing="5px" width="720px">
                             <tr height="160px">
                                 <a href=""><td id="tile1" width="32%" style="background-color: pink; padding: 15px;">
                                     <font style="font-size: 20px; font-weight: 600;">QuoraBook</font>
@@ -191,6 +191,19 @@
                                         - Notification App
                                     </div>
                                 </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="buttons">
+                        <table border="0px" cellspacing="5px" width="720px">
+                            <tr height="160px">
+                                <a href=""><td id="tile4" width="100%" style="background-color: yellow; padding: 15px;">
+                                    <font style="font-size: 20px; font-weight: 600;">Snake Game</font>
+                                    <div>
+                                        - <b>Lang:</b> Java<br/>
+                                        - OOPs
+                                    </div>
+                                </td></a>
                             </tr>
                         </table>
                     </div>
@@ -243,6 +256,23 @@ Also it help alleviate doctor shortages around the world by freeing up physician
                                 <div align="left">
                                     <p>NotifyMe is an reminder app that creates alarm (with some specified task or services ) when android receives message from a verified user. Simply notification without internet.</p>
                                     <label class="link2"><a href="http://www.github.com/manjuransari143/NotifyMe">View on Github</a></label>
+                                </div>
+                                <div class="close">Close</div>
+                            </div>
+                        </div>
+
+                        <div id="foo4" class="pag">
+                            <div id="tile" align="center">
+                                <h1 class="title_name" style="color: #fff;"><b>Snake Game</b></h1>
+                                <div align="left">
+                                	<p align="center">
+	                                    <img src="screenshot/snakegame2.png"/>
+	                                    <img src="screenshot/snakegame1.png" hspace="10px" />
+                                	</p>
+                                	<p>
+                                		Snake game build using OOPs.
+                                	</p>
+                                    <label class="link2"><a href="https://github.com/manjuransari143/SnakeGame">View on Github</a></label>
                                 </div>
                                 <div class="close">Close</div>
                             </div>
@@ -303,6 +333,10 @@ Also it help alleviate doctor shortages around the world by freeing up physician
           document.getElementById('tile3').addEventListener('click', () => {
             mohill.setStyle({backgroundColor: '#0d5661'});
             mohill.open('foo3');
+          });
+          document.getElementById('tile4').addEventListener('click', () => {
+            mohill.setStyle({backgroundColor: '#0d5661'});
+            mohill.open('foo4');
           });
         })();
         </script>
